@@ -9,16 +9,18 @@
 <body>
 
 
-    <div class="container">\
+    <div class="container">
         <div class="row">
-
-            <form action="" method="post">
+            <form action="{{url('/upload')}}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">FILE</label>
-                    <input type="text" name=""
-                    555
+                    <label for="" class="form-label">FILE</label><br>
+                    <input type="file" name="upload_file"
                      id="" class="form-control" placeholder="" aria-describedby="helpId" />
-                    <small id="helpId" class="text-muted">Help text</small>
+
+                </div>
+                <div>
+                    <button name="submit" name="submit" >upload</button>
                 </div>
             </form>
 

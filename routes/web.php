@@ -29,3 +29,10 @@ Route::get('/service', [ServiceController::class, 'index'] )->name('tea.service'
 // Route::get('/index',function(){
 //     return view('index');
 // });
+
+// -----------for file upload--------
+Route::get('/upload', function(){
+    return view('upload');
+});
+
+Route::post('/upload',[ContactController::class, 'upload']);
